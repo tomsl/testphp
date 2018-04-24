@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hello, dialog mail .. </title>
+
+		<meta name="content-type" content="text/html; charset=UTF-8" />
+		<meta name="expires" content="-1" />
+		<meta name="pragma" content="no-cache" />
+		<meta name="language" content="de" />
+		<meta name="description" content="dialog-Mail - die hochprofessionelle Lösung für dialog-orientiertes e-Mail-Marketing" />
+		<meta name="robots" content="noindex,nofollow,noarchive" />
+		<meta name="author" content="dialog-Mail e-Mail Marketing Systems GmbH" />
+		<meta name="copyright" content="dialog-Mail e-Mail Marketing Systems GmbH, (c) 2003-{$thisyear}" />
+		<meta name="MSSmartTagsPreventParsing" content="TRUE" />
+
+		<!-- Bootstrap -->
+		<link href="res/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="res/style01/css/my.css?1000" rel="stylesheet">
+
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			h2{
+				background: #efefef none repeat scroll 0 0;
+				font-size: 30px;
+			}
+			h1{
+				background: #8f8f8f none repeat scroll 0 0;
+				font-size: 2em;
+				margin: 0.67em 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12 well">
+					<h1>Status Page Admin info </h1>
+
+					<p style="float: left;"> 
+						<a href="home.php"><img src="/res/style01/dM_wartung.png?2001" border="0" alt="zur dialog-Mail Startseite" title="zur dialog-Mail Startseite" /></a>
+					</p>
+					<h2> Test Resultat {$testresult}</h2>
+					<p>
+						Anzahl Tests gesamt : <span class="badge"> {$anz_test} </span>
+					</p>
+					<p>
+						Es wurden {$anz_test} Checks in {$time_performed} sekunden abgesetzt. (forks)
+					</p>
+					<p>
+						Dauer aller Tests: {$time_consumed} seconds,  
+						and limit was {$time_max} seconds.
+					</p>
+
+				</div> <!-- // col-md-12 -->
+				<div class="col-md-12 well">
+					{$displaytext}
+				</div>
+			</div> <!-- // row -->
+			<div class="row">
+				<div class="col-md-12 well" >
+					<h3><a href="{$url_ok}" target="_blank">Ziel URL : {$url_ok} </a></h3>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 ">
+					<h3>To see the available pages in preview</h3>
+				</div>
+				<div class="col-md-4 well"> 
+					<b><a href="index_state_health.htm">index_state_health.htm</a></b>
+					<br/> should never be displayed, but everything looks ok. 
+					<br/>Just forward with the button.
+				</div>
+				<div class="col-md-4 well"> 
+					<b><a href="index_state_warning.htm">index_state_warning.htm</a></b>
+					<br/> is displayed if there is something wrong (some test failed)
+				</div>
+				<div class="col-md-4 well"> 
+					<b><a href="index_state_error.htm">index_state_error.htm</a></b>
+					<br/> is displayed if there are masiv problems (all tests failed)
+				</div>
+			</div>			 
+			<div class="row">
+				<div class="col-md-12 well">
+					<h2>Test details ... </h2>
+					<pre>{$checksummary}</pre>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+		<script src="/res/jquery.min.js" type="text/javascript"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="/res/bootstrap/js/bootstrap.min.js"></script>
+		<!-- dm ga -->
+		<script type="text/javascript">
+			var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+			document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+		</script>
+		<script type="text/javascript">
+			try {
+				var pageTracker = _gat._getTracker("UA-215103-7");
+				pageTracker._trackPageview();
+			} catch (err) {
+			}</script>
+		<!-- ende dm ga -->
+
+	</body>
+</html>
